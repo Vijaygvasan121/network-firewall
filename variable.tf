@@ -9,10 +9,6 @@ locals {
   inspection_vpc_cidr = cidrsubnet(var.super_cidr_block, 8, 255)
 } 
 
-data "aws_availability_zones" "available" {
-  state = "available"
-}
-
 data "aws_region" "current" {}
 
 variable "aws_region" {
