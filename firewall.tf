@@ -1,4 +1,4 @@
-resource "aws_networkfirewall_firewall_policy" "anfw_policy" {
+/*resource "aws_networkfirewall_firewall_policy" "anfw_policy" {
   name = "firewall-policy"
   firewall_policy {
     stateless_default_actions          = ["aws:forward_to_sfe"]
@@ -194,4 +194,4 @@ resource "aws_networkfirewall_logging_configuration" "anfw_alert_logging_configu
       log_type             = "FLOW"
     }
   }
-}
+}*/
