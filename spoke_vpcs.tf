@@ -113,7 +113,7 @@ resource "aws_route_table" "spoke_vpc_b_route_table" {
   vpc_id = aws_vpc.spoke_vpc_b.id
   route {
     cidr_block         = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.vpc_dev-igw.id
+    gateway_id = aws_internet_gateway.vpc_prod-igw.id
   }
   tags = {
     Name = "spoke-vpc-b/route-table"
@@ -127,7 +127,7 @@ resource "aws_internet_gateway" "vpc_dev-igw" {
   }
 }
 
-resource "aws_internet_gateway" "vpc_dev-igw" {
+resource "aws_internet_gateway" "vpc_prod-igw" {
   vpc_id = aws_vpc.spoke_vpc_b.id
   tags = {
     Name = "vijayigwtf"
