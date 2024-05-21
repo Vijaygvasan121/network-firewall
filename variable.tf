@@ -20,3 +20,10 @@ description = "Region"
 type = string
 default = "ap-south-1"    #change the region wrt to reqiurement
 }
+
+
+variable "aws_availability_zone" {
+description = "Availability Zone1"
+type = string
+default = "ap-south-1a"
+}
