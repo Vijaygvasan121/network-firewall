@@ -1,4 +1,4 @@
-resource "aws_security_group" "spoke_vpc_a_endpoint_sg" {
+/*resource "aws_security_group" "spoke_vpc_a_endpoint_sg" {
   name        = "spoke-vpc-a/sg-ssm-ec2-endpoints"
   description = "Allow TLS inbound traffic for SSM/EC2 endpoints"
   vpc_id      = aws_vpc.spoke_vpc_a.id
@@ -97,4 +97,4 @@ resource "aws_vpc_endpoint" "spoke_vpc_b_ec2_messages_endpoint" {
     aws_security_group.spoke_vpc_b_endpoint_sg.id,
   ]
   private_dns_enabled = true
-}
+}*/
