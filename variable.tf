@@ -1,4 +1,4 @@
-variable "super_cidr_block" {
+/*variable "super_cidr_block" {
   type    = string
   default = "10.0.0.0/8"
 }
@@ -21,3 +21,4 @@ description = "Availability Zone1"
 type = string
 default = "ap-south-1a"
 }
+*/
