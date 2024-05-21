@@ -1,7 +1,7 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 
-
+/*
 resource "aws_vpc" "spoke_vpc_a" {
   cidr_block           = local.spoke_vpc_a_cidr
   instance_tenancy     = "default"
@@ -140,3 +140,4 @@ resource "aws_route_table_association" "spoke_vpc_b_route_table_association" {
   subnet_id      = aws_subnet.spoke_vpc_b_protected_subnet[count.index].id
   route_table_id = aws_route_table.spoke_vpc_b_route_table.id
 }
+*/
