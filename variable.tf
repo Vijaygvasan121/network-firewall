@@ -9,15 +9,12 @@ locals {
   inspection_vpc_cidr = cidrsubnet(var.super_cidr_block, 8, 255)
 } 
 
-data "aws_region" "current" {}
-
 variable "aws_region" {
 description = "Region"
 type = string
 default = "ap-south-1"    #change the region wrt to reqiurement
 }
 
-data "aws_availability_zones" "available" {}
 
 variable "aws_availability_zone" {
 description = "Availability Zone1"
