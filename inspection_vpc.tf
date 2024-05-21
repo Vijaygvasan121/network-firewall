@@ -88,11 +88,7 @@ resource "aws_route_table_association" "inspection_vpc_tgw_subnet_route_table_as
 resource "aws_route_table" "inspection_vpc_firewall_subnet_route_table" {
   count  = length(data.aws_availability_zones.available.names)
   vpc_id = aws_vpc.inspection_vpc.id
-  route {
-    cidr_block         = var.super_cidr_block
-    transit_gateway_id = aws_ec2_transit_gateway.tgw.id
-  }
-  route {
+    route {
     cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.inspection_vpc_nat_gw[count.index].id
   }
