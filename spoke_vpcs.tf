@@ -52,7 +52,7 @@ resource "aws_route_table" "spoke_vpc_a_route_table" {
   vpc_id = aws_vpc.spoke_vpc_a.id
   route {
     cidr_block         = "0.0.0.0/0"
-    transit_gateway_id = aws_ec2_transit_gateway.tgw.id
+    gateway_id = aws_internet_gateway.vpc_dev-igw.id
   }
   tags = {
     Name = "spoke-vpc-a/route-table"
@@ -113,10 +113,24 @@ resource "aws_route_table" "spoke_vpc_b_route_table" {
   vpc_id = aws_vpc.spoke_vpc_b.id
   route {
     cidr_block         = "0.0.0.0/0"
-    transit_gateway_id = aws_ec2_transit_gateway.tgw.id
+    gateway_id = aws_internet_gateway.vpc_dev-igw.id
   }
   tags = {
     Name = "spoke-vpc-b/route-table"
+  }
+}
+
+resource "aws_internet_gateway" "vpc_dev-igw" {
+  vpc_id = aws_vpc.spoke_vpc_a.id
+  tags = {
+    Name = "vijayigwtf"
+  }
+}
+
+resource "aws_internet_gateway" "vpc_dev-igw" {
+  vpc_id = aws_vpc.spoke_vpc_b.id
+  tags = {
+    Name = "vijayigwtf"
   }
 }
 
