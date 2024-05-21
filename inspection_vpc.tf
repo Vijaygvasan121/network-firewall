@@ -9,7 +9,7 @@ resource "aws_vpc" "inspection_vpc" {
   }
 }
 
-data "aws_availability_zones" "available" {}
+
 
 resource "aws_subnet" "inspection_vpc_public_subnet" {
   count                   = length(data.aws_availability_zones.available.names)
