@@ -1,5 +1,6 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
+data "aws_availability_zones" "available" {}
 
 resource "aws_vpc" "spoke_vpc_a" {
   cidr_block           = local.spoke_vpc_a_cidr
