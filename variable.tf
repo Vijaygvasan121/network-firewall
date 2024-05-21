@@ -14,3 +14,9 @@ data "aws_availability_zones" "available" {
 }
 
 data "aws_region" "current" {}
+
+variable "aws_region" {
+description = "Region"
+type = string
+default = "ap-south-1"    #change the region wrt to reqiurement
+}
