@@ -1,6 +1,6 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
-
+/*
 resource "aws_vpc" "inspection_vpc" {
   cidr_block       = local.inspection_vpc_cidr
   instance_tenancy = "default"
@@ -126,4 +126,4 @@ resource "aws_route_table_association" "inspection_vpc_public_subnet_route_table
   count          = length(data.aws_availability_zones.available.names)
   route_table_id = aws_route_table.inspection_vpc_public_subnet_route_table[count.index].id
   subnet_id      = aws_subnet.inspection_vpc_public_subnet[count.index].id
-}
+}*/
