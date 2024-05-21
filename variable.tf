@@ -8,3 +8,9 @@ locals {
   spoke_vpc_b_cidr    = cidrsubnet(var.super_cidr_block, 8, 11)
   inspection_vpc_cidr = cidrsubnet(var.super_cidr_block, 8, 255)
 } 
+
+data "aws_availability_zones" "available" {
+  state = "available"
+}
+
+data "aws_region" "current" {}
